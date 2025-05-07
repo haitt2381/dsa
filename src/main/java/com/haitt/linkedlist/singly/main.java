@@ -20,6 +20,7 @@ public class main {
         //Length of list exercise
         System.out.println("Size: " + list.size());
         
-        
+        //Find node method
+        System.out.println("found: " + list.find(1));
     }
 }

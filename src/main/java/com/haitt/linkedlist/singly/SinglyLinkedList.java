@@ -43,6 +43,15 @@ public class SinglyLinkedList {
 
         return count;
     }
-    
-    
+
+    public Node find(int data) {
+        Node curr = head;
+        while (Objects.nonNull(curr)) {
+            if (curr.data == data) {
+                return curr;
+            }
+            curr = curr.next;
+        }
+        return null;
+    }
 }
