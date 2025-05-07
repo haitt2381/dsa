@@ -7,7 +7,9 @@ public class ListNode {
     ListNode(int x) {
         val = x;
     }
-
-    public ListNode() {
+    
+    @Override
+    public String toString() {
+        return String.valueOf(val);
     }
 }
