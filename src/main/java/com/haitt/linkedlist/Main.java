@@ -7,8 +7,10 @@ public class Main {
         linkedList.insertAtBeginning(7);
         linkedList.insertAtEnd(3);
         System.out.println("Primary: " + linkedList.print());
+        
+        linkedList.insertAfter(linkedList.head.next, 19);
 
-        MyLinkedList cloneList = linkedList.cloneList();
-        System.out.println("clone: " + cloneList.print());
+        System.out.println("after insert: " + linkedList.print());
+        
     }
 }

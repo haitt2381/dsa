@@ -63,4 +63,14 @@ public class MyLinkedList {
         newLinkedList.head = newHead;
         return newLinkedList;
     }
+    
+    public void insertAfter(ListNode target, int value) {
+        if (target == null) {
+            return;
+        }
+        
+        ListNode newNode = new ListNode(value);
+        newNode.next = target.next;
+        target.next = newNode;
+    }
 }
