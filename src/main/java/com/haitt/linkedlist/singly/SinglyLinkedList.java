@@ -32,6 +32,17 @@ public class SinglyLinkedList {
         
         return result.toString();
     }
+
+    public int size() {
+        int count = 0;
+        Node curr = head;
+        while (Objects.nonNull(curr)) {
+            count++;
+            curr = curr.next;
+        }
+
+        return count;
+    }
     
     
 }

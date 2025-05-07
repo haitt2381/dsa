@@ -16,5 +16,10 @@ public class main {
         
         //PrintList exercise
         System.out.println(list.print());
+        
+        //Length of list exercise
+        System.out.println("Size: " + list.size());
+        
+        
     }
 }
