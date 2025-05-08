@@ -56,8 +56,30 @@ public class SinglyLinkedList {
     
     public Node insertAtBeginning(int data) {
         Node newNode = new Node(data);
+        if (head == null) {
+            head = newNode;
+            return newNode;
+        }
+        
         newNode.next = head;
         head = newNode;
+        return newNode;
+    }
+    
+    public Node insertAtEnd(int data) {
+        Node newNode = new Node(data);
+        
+        if (head == null) {
+            head = newNode;
+            return newNode;
+        }
+        
+        Node curr = head;
+        while (curr.next != null) {
+            curr = curr.next;
+        }
+        
+        curr.next = newNode;
         return newNode;
     }
 }
