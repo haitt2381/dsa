@@ -53,4 +53,11 @@ public class SinglyLinkedList {
         }
         return null;
     }
+    
+    public Node insertAtBeginning(int data) {
+        Node newNode = new Node(data);
+        newNode.next = head;
+        head = newNode;
+        return newNode;
+    }
 }

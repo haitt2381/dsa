@@ -14,13 +14,17 @@ public class main {
         first.next = second;
         second.next = third;
         
-        //PrintList exercise
+        // PrintList exercise
         System.out.println(list.print());
         
-        //Length of list exercise
+        // Length of list exercise
         System.out.println("Size: " + list.size());
         
-        //Find node method
+        // Find node method
         System.out.println("found: " + list.find(1));
+        
+        // Insert at begin exercise
+        list.insertAtBeginning(5);
+        System.out.println(list.print());
     }
 }
