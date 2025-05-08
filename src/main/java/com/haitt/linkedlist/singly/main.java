@@ -36,6 +36,8 @@ public class main {
         // insertAfter
 //        list.insertAfter(second, 30);
         
+        // insertBefore
+//        list.insertBefore(second, 5);
         System.out.println("primary: " + list.print());
     }
 }

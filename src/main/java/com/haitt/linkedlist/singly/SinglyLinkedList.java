@@ -106,7 +106,7 @@ public class SinglyLinkedList {
     
     public Node insertAfter(Node prev, int data) {
         if (prev == null) {
-            return null;
+            throw new IllegalArgumentException("prev node cannot be null");
         }
 
         Node newNode = new Node(data);
@@ -114,5 +114,32 @@ public class SinglyLinkedList {
         prev.next = newNode;
         
         return newNode;
+    }
+    
+    public Node insertBefore(Node prev, int data) {
+        if (prev == null) {
+            return null;
+        }
+        
+        Node newNode = new Node(data);
+
+        if (prev == head) {
+            newNode.next = head;
+            head = newNode;
+            return newNode;
+        }
+        
+        Node curr = head;
+        while (curr != null) {
+            if (curr.next == prev) {
+                newNode.next = curr.next;
+                curr.next = newNode;
+                return newNode;
+            }
+
+            curr = curr.next;
+        }
+
+        return null;
     }
 }
