@@ -103,4 +103,16 @@ public class SinglyLinkedList {
         list.head = newHead;
         return list;
     }
+    
+    public Node insertAfter(Node prev, int data) {
+        if (prev == null) {
+            return null;
+        }
+
+        Node newNode = new Node(data);
+        newNode.next = prev.next;
+        prev.next = newNode;
+        
+        return newNode;
+    }
 }

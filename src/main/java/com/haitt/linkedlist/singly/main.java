@@ -32,6 +32,10 @@ public class main {
         // Clone list
 //        SinglyLinkedList newList = list.cloneList();
 //        System.out.println("clone list: " + newList.print());
+        
+        // insertAfter
+//        list.insertAfter(second, 30);
+        
         System.out.println("primary: " + list.print());
     }
 }
