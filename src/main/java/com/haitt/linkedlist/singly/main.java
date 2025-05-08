@@ -10,9 +10,9 @@ public class main {
         Node second = new Node(20);
         Node third = new Node(30);
         
-//        list.head = first;
-//        first.next = second;
-//        second.next = third;
+        list.head = first;
+        first.next = second;
+        second.next = third;
         
         // PrintList exercise
 //        System.out.println(list.print());
@@ -29,6 +29,9 @@ public class main {
         // Insert at the end exercise
 //        list.insertAtEnd(10);
         
-        System.out.println(list.print());
+        // Clone list
+//        SinglyLinkedList newList = list.cloneList();
+//        System.out.println("clone list: " + newList.print());
+        System.out.println("primary: " + list.print());
     }
 }

@@ -2,6 +2,7 @@ package com.haitt.linkedlist.singly;
 
 import com.haitt.linkedlist.Node;
 
+import java.util.LinkedList;
 import java.util.Objects;
 
 public class SinglyLinkedList {
@@ -81,5 +82,25 @@ public class SinglyLinkedList {
         
         curr.next = newNode;
         return newNode;
+    }
+    
+    public SinglyLinkedList cloneList() {        
+        SinglyLinkedList list = new SinglyLinkedList();
+        if (head == null) {
+            return list;
+        }
+        
+        Node newHead = new Node(head.data);
+        Node clone = newHead;
+        Node curr = head.next;
+        
+        while (curr != null) {
+            clone.next = new Node(curr.data);
+            curr = curr.next;
+            clone = clone.next;
+        }
+        
+        list.head = newHead;
+        return list;
     }
 }
