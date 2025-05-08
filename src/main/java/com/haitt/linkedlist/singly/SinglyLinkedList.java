@@ -15,28 +15,27 @@ public class SinglyLinkedList {
      * @return A string representing the list, or <code>The list is empty</code> if the list is empty.
      */
     public String print() {
-        if (Objects.isNull(head)) {
+        if (head == null) {
             return "The list is empty";
         }
         
         Node curr = head;
         StringBuilder result = new StringBuilder();
         
-        while (Objects.nonNull(curr)) {
+        while (curr != null) {
             result.append(curr.data);
             result.append(" -> ");
             curr = curr.next;
         }
         
         result.append("null");
-        
         return result.toString();
     }
 
     public int size() {
         int count = 0;
         Node curr = head;
-        while (Objects.nonNull(curr)) {
+        while (curr != null) {
             count++;
             curr = curr.next;
         }
@@ -46,7 +45,7 @@ public class SinglyLinkedList {
 
     public Node find(int data) {
         Node curr = head;
-        while (Objects.nonNull(curr)) {
+        while (curr != null) {
             if (curr.data == data) {
                 return curr;
             }
