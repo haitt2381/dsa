@@ -18,7 +18,7 @@ public class main {
 //        System.out.println(list.print());
         
         // Length of list exercise
-//        System.out.println("Size: " + list.size());
+        System.out.println("Size: " + list.size());
         
         // Find node method
 //        System.out.println("found: " + list.find(1));
@@ -38,6 +38,9 @@ public class main {
         
         // insertBefore
 //        list.insertBefore(second, 5);
+        
+        // Insert At
+        list.insertAt(3, 5);
         System.out.println("primary: " + list.print());
     }
 }

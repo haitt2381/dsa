@@ -142,4 +142,22 @@ public class SinglyLinkedList {
 
         return null;
     }
+    
+    public Node insertAt(int index, int data) {
+        if (index < 0 || index >= size()) {
+            throw new IllegalArgumentException("index out of bounds");
+        }
+        
+        if (index == 0) {
+            return insertAtBeginning(data);
+        }
+        
+        Node newNode = new Node(data);
+        Node curr = head;
+        for (int i = 0; i < index; i++) {
+            curr = curr.next;
+        }
+
+        return insertAfter(curr, data);
+    }
 }
